@@ -43,7 +43,7 @@ public class LoginDAO {
 			// データベース接続
 			conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS);
 
-			// SELECT分を準備する。
+			// SELECT文を準備する。
 			String sql = "SELECT MAIL_ADDRESS, USER_NAME, GENDER_KBN, BIRTH_DATE, PASSWORD FROM USER_MASTER"
 					+ " WHERE MAIL_ADDRESS = ? AND PASSWORD = ?";
 			PreparedStatement pStm = conn.prepareStatement(sql);
